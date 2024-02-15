@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TwoActivity"
+    android:background="#1C1A46"
+    >
+
+    <ImageView
+        android:id="@+id/logo_init"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo_one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:id="@+id/init_text_menu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Институт новых информационных технологий"
+        app:layout_constraintTop_toBottomOf="@+id/logo_init"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+
+
+        />
+
+    <EditText
+        android:id="@+id/editText_1"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/init_text_menu"
+        android:layout_marginTop="60dp"
+        android:drawableLeft="@drawable/login_icon"
+        android:drawablePadding="8dp"
+        android:hint="Пользваетель"
+        android:maxLength="10"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+
+
+    <EditText
+        android:id="@+id/editText_2"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_1"
+        android:drawableLeft="@drawable/password_icon"
+        android:drawablePadding="8dp"
+        android:hint="Пароль"
+        android:maxLength="10"
+        android:textSize="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+
+
+    <Button
+        android:id="@+id/loginButton1"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="Войти"
+        android:textColor="#FFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_2"
+        android:background="@drawable/button_style"
+        android:layout_marginTop="30dp"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

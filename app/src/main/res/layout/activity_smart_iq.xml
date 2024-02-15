@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#030840">
+
+    <TextView
+        android:id="@+id/tv_smart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SmartIQ"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.150"
+        android:textSize="30dp"
+        />
+
+    <Button
+        android:id="@+id/bt_new"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#3F3E79"
+        android:text="Новая игра"
+        android:textSize="20dp"
+        android:elevation="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_smart" />
+
+    <Button
+        android:id="@+id/bt_tb"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#3F3E79"
+        android:text="Таблица лидеров"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_new"  />
+
+    <Button
+        android:id="@+id/bt_st"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#3F3E79"
+        android:text="Настройки"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_tb"  />
+
+    <Button
+        android:id="@+id/bt_main"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#3F3E79"
+        android:text="Главное меню"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_st"  />
+</androidx.constraintlayout.widget.ConstraintLayout>
