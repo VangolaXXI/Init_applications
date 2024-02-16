@@ -8,6 +8,9 @@
     <string name="login">Войти</string>
     <string name="Password">Пароль</string>
     <string name="User">Пользователь</string>
+    <string name="INIT">Институт новых информационных технологий</string>
+<!--    <string name=""></string>-->
+<!--    <string name=""></string>-->
 <!--    <string name=""></string>-->
 
 </resources>

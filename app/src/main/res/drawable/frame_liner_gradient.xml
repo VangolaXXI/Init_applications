@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Фоновый градиент -->
+    <gradient
+        android:startColor="#182076"
+        android:endColor="#0F144E"
+        android:type="linear"
+        android:angle="90" />
+
+    <!-- Бордер -->
+    <corners android:radius="16dp" /> <!-- Установите радиус углов для всего фрейма -->
+    <stroke
+
+        /> <!-- Цвет бордера -->
+</shape>
