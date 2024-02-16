@@ -21,10 +21,11 @@
 
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/loginButton"
         android:layout_width="209dp"
         android:layout_height="48dp"
-        android:text="Войти"
+        android:text="@string/login"
         android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@+id/finish_text"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,7 @@
         android:layout_marginTop="150dp"
         android:elevation="50dp"
         android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
         android:onClick="onLoginButtonClick"
 
         />

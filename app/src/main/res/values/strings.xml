@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">INIT</string>
+    <string name="SmartIQ">SmartIQ</string>
+    <string name="New_game">Новая игра</string>
+    <string name="Leaderboard">Таблица лидеров</string>
+    <string name="settings">Настройки</string>
+    <string name="Main_menu">Главное меню</string>
+    <string name="login">Войти</string>
+    <string name="Password">Пароль</string>
+    <string name="User">Пользователь</string>
+<!--    <string name=""></string>-->
+
 </resources>

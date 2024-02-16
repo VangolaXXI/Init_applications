@@ -11,7 +11,7 @@
         android:id="@+id/tv_smart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SmartIQ"
+        android:text="@string/SmartIQ"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,50 +23,53 @@
         />
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/bt_new"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="80dp"
-        android:backgroundTint="#3F3E79"
-        android:text="Новая игра"
-        android:textSize="20dp"
-        android:elevation="50dp"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/New_game"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_smart" />
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/bt_tb"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="41dp"
-        android:backgroundTint="#3F3E79"
-        android:text="Таблица лидеров"
-        android:textSize="20dp"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/Leaderboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_new"  />
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/bt_st"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="41dp"
-        android:backgroundTint="#3F3E79"
-        android:text="Настройки"
-        android:textSize="20dp"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/settings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_tb"  />
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/bt_main"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginTop="41dp"
-        android:backgroundTint="#3F3E79"
-        android:text="Главное меню"
-        android:textSize="20dp"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/Main_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/bt_st"  />
