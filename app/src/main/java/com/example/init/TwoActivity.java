@@ -19,7 +19,7 @@ public class TwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Обработчик нажатия на кнопку
-                Intent intent = new Intent(TwoActivity.this, SmartIQ.class);
+                Intent intent = new Intent(TwoActivity.this, persanal_card.class);
                 startActivity(intent);
             }
         });

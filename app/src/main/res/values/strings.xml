@@ -9,8 +9,12 @@
     <string name="Password">Пароль</string>
     <string name="User">Пользователь</string>
     <string name="INIT">Институт новых информационных технологий</string>
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
-<!--    <string name=""></string>-->
+    <string name="menu">Меню</string>
+    <string name="smariq">SmarIQ</string>
+    <string name="news">Новости</string>
+    <string name="cabinet">Кабинет</string>
+        <string name="persanal_card">Личная карточка</string>
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
 
 </resources>

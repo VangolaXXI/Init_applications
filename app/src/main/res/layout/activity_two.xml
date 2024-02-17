@@ -28,9 +28,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="15dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/leaguespartanbold_eng"
         android:textColor="#FFFFFF"
-        android:textStyle="bold"
+
+
 
 
         />
@@ -43,15 +45,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/init_text_menu"
         android:layout_marginTop="60dp"
-        android:drawableLeft="@drawable/login_icon"
-        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/login_icon"
+        android:drawablePadding="3dp"
         android:hint="@string/User"
         android:maxLength="10"
-        android:textSize="20dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/leaguespartanbold_eng"
         android:backgroundTint="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        />
 
 
 
@@ -63,15 +66,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_1"
-        android:drawableLeft="@drawable/password_icon"
-        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/password_icon"
+        android:drawablePadding="3dp"
         android:hint="@string/Password"
-        android:maxLength="10"
-        android:textSize="20dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/leaguespartanbold_eng"
         android:backgroundTint="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:textColor="#FFFFFF" />
 
 
 
@@ -82,6 +84,7 @@
         android:layout_height="48dp"
         android:text="@string/login"
         android:textColor="#FFF"
+        android:fontFamily="@font/leaguespartanbold_eng"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_2"
