@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_menu"
+    android:orientation="vertical"
+    android:background="@drawable/liner_gradient">
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:text="@string/persanal_card"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:textSize="18sp"
+        android:layout_marginTop="110dp"
+        />
+
+    <View
+        android:layout_gravity="center|top"
+        android:layout_marginTop="139dp"
+        android:layout_width="156dp"
+        android:layout_height="2dp"
+        android:background="#2B969D"
+        />
+
+    <LinearLayout
+        android:id="@+id/frame_container1"
+        android:layout_marginTop="152dp"
+        android:layout_gravity="top|center"
+        android:layout_width="358dp"
+        android:layout_height="239dp"
+        android:background="@drawable/frame_liner_gradient">
+
+        <ImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:lineSpacingExtra="24dp"
+            android:text="Асанов Мирлан Мирланович\nФакультет ИНИТ\nгр. ПИн - 19 - 20\nasanov123@gmail.com\n20/13589"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

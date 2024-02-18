@@ -13,7 +13,9 @@
     <string name="smariq">SmarIQ</string>
     <string name="news">Новости</string>
     <string name="cabinet">Кабинет</string>
-        <string name="persanal_card">Личная карточка</string>
+    <string name="persanal_card">Личная карточка</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--    <string name=""></string>-->
     <!--    <string name=""></string>-->
 

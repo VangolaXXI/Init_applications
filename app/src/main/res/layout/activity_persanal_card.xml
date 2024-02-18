@@ -6,189 +6,138 @@
     android:layout_height="match_parent"
     android:background="@drawable/liner_gradient"
     tools:context=".persanal_card">
-        <TextView
-            android:id="@+id/titleTextView"
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="#0E1248"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Первая пара: Картинка 1 и Текст 1 -->
+        <LinearLayout
+            android:id="@+id/layout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/persanal_card"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/leaguespartanbold_eng"
-            android:textSize="18sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="100dp"/>
+            android:layout_marginEnd="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onLinearLayoutClick"
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="156dp"
-            android:layout_height="2dp"
-            android:background="#2B969D"
-            app:layout_constraintTop_toBottomOf="@id/titleTextView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-        <FrameLayout
-            android:id="@+id/frame_container1"
-            android:layout_width="358dp"
-            android:layout_height="239dp"
-            android:background="@drawable/frame_liner_gradient"
-            app:layout_constraintTop_toBottomOf="@id/titleTextView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp">
 
             <ImageView
-                android:id="@+id/circleImageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="top|start"
-                android:background="@drawable/circle"
-                android:layout_marginStart="23dp"
-                android:layout_marginTop="15dp"/>
+                android:id="@+id/icon1"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Асанов Мирлан Мирланович\nФакультет ИНИТ\nгр. ПИн - 19 - 20\nasanov123@gmail.com\n20/13589"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp"
                 android:fontFamily="@font/leaguespartanbold_ru"
-                android:lineSpacingExtra="24dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="27dp"/>
+                android:text="@string/menu"
+                android:textColor="#FFFFFF"
+                android:textFontWeight="500" />
 
+        </LinearLayout>
 
-        </FrameLayout>
+        <!-- Вторая пара: Картинка 2 и Текст 2 -->
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onLinearLayoutClick"
+            android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="match_parent"
-            android:layout_height="98dp"
-            android:background="#0E1248"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:paddingStart="20dp"
-            android:paddingEnd="14dp">
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:src="@drawable/smartiq" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="15dp">
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="@string/smariq"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <!-- Первая пара: Картинка 1 и Текст 1 -->
-                <LinearLayout
-                    android:id="@+id/layout1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="40dp"
-                    android:gravity="center_vertical|center_horizontal"
-                    >
+        <!-- Третья пара: Картинка 3 и Текст 3 -->
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onLinearLayoutClick"
+            android:orientation="vertical">
 
+            <ImageView
+                android:id="@+id/icon3"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/news" />
 
-                    <ImageView
-                        android:id="@+id/icon1"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:src="@drawable/home"
-                        android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/leaguespartanbold_ru"
+                android:text="@string/news"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/menu"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/leaguespartanbold_ru"
-                        android:textFontWeight="500"/>
-                </LinearLayout>
+        <!-- Четвёртая пара: Картинка 4 и Текст 4 -->
+        <LinearLayout
+            android:id="@+id/layout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onLinearLayoutClick"
+            android:orientation="vertical">
 
-                <!-- Вторая пара: Картинка 2 и Текст 2 -->
-                <LinearLayout
-                    android:id="@+id/layout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginEnd="40dp"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:onClick="onLinearLayoutClick">
+            <ImageView
+                android:id="@+id/icon4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/login_icon" />
 
-                    <ImageView
-                        android:id="@+id/icon2"
-                        android:layout_width="47dp"
-                        android:layout_height="47dp"
-                        android:src="@drawable/smartiq"
-                        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/leaguespartanbold_ru"
+                android:text="@string/cabinet"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/smariq"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/leaguespartanbold_eng"
-                        android:textStyle="bold"
-                        />
-                </LinearLayout>
-
-                <!-- Третья пара: Картинка 3 и Текст 3 -->
-                <LinearLayout
-                    android:id="@+id/layout3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="40dp"
-                    android:gravity="center_vertical|center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/icon3"
-                        android:layout_width="47dp"
-                        android:layout_height="47dp"
-                        android:src="@drawable/news"
-                        android:scaleType="fitCenter"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/news"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/leaguespartanbold_ru"
-                        />
-                </LinearLayout>
-
-                <!-- Четвёртая пара: Картинка 4 и Текст 4 -->
-                <LinearLayout
-                    android:id="@+id/layout4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical|center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/icon4"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/login_icon"
-                        android:scaleType="fitCenter"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/cabinet"
-                        android:textColor="#FFFFFF"
-                        android:fontFamily="@font/leaguespartanbold_ru"
-                        />
-                </LinearLayout>
-
-            </LinearLayout>
+    </LinearLayout>
 
 
 
-
-
-
-
-
-
-        </FrameLayout>
 
 
 
