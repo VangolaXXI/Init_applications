@@ -49,7 +49,8 @@
         android:text="@string/Leaderboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bt_new"  />
+        app:layout_constraintTop_toBottomOf="@id/bt_new"
+        />
 
     <Button
         style="@style/ButtonStyle"
