@@ -12,25 +12,26 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-public class FirstFragment extends Fragment {
+public class StartMenu extends Fragment {
+    private OnStartMenuButtonClicked listener;
 
-    private OnFirstFragmentButtonClicked listener;
 
-    public interface OnFirstFragmentButtonClicked {
-        void onFirstFragmentButtonClick();
+
+    public interface OnStartMenuButtonClicked {
+        void onStartMenuButtonClick();
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first, container, false);
+        View view = inflater.inflate(R.layout.fragment_start_menu, container, false);
 
-        Button nextButton = view.findViewById(R.id.loginButton1);
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        Button startButton = view.findViewById(R.id.loginButton);
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (listener != null) {
-                    listener.onFirstFragmentButtonClick();
+                    listener.onStartMenuButtonClick();
                 }
             }
         });
@@ -38,8 +39,7 @@ public class FirstFragment extends Fragment {
         return view;
     }
 
-    public void setOnFirstFragmentButtonClickListener(OnFirstFragmentButtonClicked listener) {
+    public void setOnStartMenuButtonClickListener(OnStartMenuButtonClicked listener) {
         this.listener = listener;
     }
-
 }

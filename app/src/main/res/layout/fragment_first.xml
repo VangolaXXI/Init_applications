@@ -3,17 +3,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".FirstFragment"
+    android:background="#1C1A46">
 
+    <ImageView
+        android:id="@+id/logo_init"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo_one"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="200dp"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/init_text_menu"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Главное меню"
-        android:layout_gravity="center"
-        android:textSize="30dp"
+        android:gravity="center"
+        android:text="@string/INIT"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="285dp"
+        android:textSize="20sp"
         android:fontFamily="@font/spartanmb_extrabold"
         android:textColor="#FFFFFF"
         />
+
+    <EditText
+        android:id="@+id/editText_1"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:drawableStart="@drawable/login_icon"
+        android:drawablePadding="3dp"
+        android:hint="@string/User"
+        android:maxLength="10"
+        android:textSize="18sp"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:backgroundTint="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        />
+
+
+
+    <EditText
+        android:id="@+id/editText_2"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:drawableStart="@drawable/password_icon"
+        android:drawablePadding="3dp"
+        android:hint="@string/Password"
+        android:textSize="18sp"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:backgroundTint="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF" />
+
+
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/loginButton1"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="@string/login"
+        android:textColor="#FFF"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:layout_gravity="center"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:layout_marginTop="170dp"
+
+        />
+
+
+
 
 </FrameLayout>

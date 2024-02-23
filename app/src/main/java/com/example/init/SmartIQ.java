@@ -45,7 +45,7 @@ public class SmartIQ extends AppCompatActivity {
 //                    startActivity(intent);
 //                    finish();
                 } else if (viewId == R.id.bt_main) {
-                    Intent intent = new Intent(SmartIQ.this, persanal_card.class);
+                    Intent intent = new Intent(SmartIQ.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
