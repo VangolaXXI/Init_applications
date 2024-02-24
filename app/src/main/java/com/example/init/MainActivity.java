@@ -1,12 +1,15 @@
 package com.example.init;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked {
+public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked,Mainmenu.OnSmartQClickListener,SmartQ.OnSmartQButtonClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +39,34 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
     public void onFirstFragmentButtonClick() {
         // Пользователь нажал на кнопку в FirstFragment, открываем MainmenuFragment
         Mainmenu mainmenu = new Mainmenu();
+        mainmenu.setOnSmartQClickListener(this);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.basic_frame, mainmenu, "MainmenuFragment")
+                .addToBackStack(null)
+                .commit();
+    }
+
+
+    @Override
+    public void onSmartQClicked() {
+        Mainmenu mainmenu = (Mainmenu) getSupportFragmentManager().findFragmentByTag("MainmenuFragment");
+        if (mainmenu != null) {
+            SmartQ smartQ = new SmartQ();
+            smartQ.setOnSmartQButtonClickListener(this);
+            smartQ.setMainmenu(mainmenu); // передаем существующий экземпляр Mainmenu
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.basic_frame, smartQ)
+                    .addToBackStack(null)
+                    .commit();
+        }
+    }
+
+
+    @Override
+    public void onSmartQButtonClicked(Mainmenu mainmenu) {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.basic_frame, mainmenu)
                 .addToBackStack(null)
                 .commit();
     }
-
 }

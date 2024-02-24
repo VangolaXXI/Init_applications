@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmartQ"
+    android:background="#030840">
+    <TextView
+        android:id="@+id/tv_smart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SmartIQ"
+        android:textColor="@color/white"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center|top"
+        android:textSize="30sp"
+
+        />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_new"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/New_game"
+        android:layout_gravity="center|top" />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_tb"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="360dp"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/Leaderboard"
+        android:layout_gravity="top|center"
+        />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_st"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="461dp"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/settings"
+        android:layout_gravity="top|center"  />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_main"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="562dp"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        android:text="@string/Main_menu"
+        android:layout_gravity="top|center"   />
+
+
+</FrameLayout>

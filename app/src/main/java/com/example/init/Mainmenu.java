@@ -13,13 +13,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 public class Mainmenu extends Fragment {
+    public interface OnSmartQClickListener {
+        void onSmartQClicked();
+    }
 
     private ImageView imageView1, imageView3, imageView4;
     private Drawable originalIcon1, originalIcon3, originalIcon4;
     private Drawable currentIcon1, currentIcon3, currentIcon4;
+    private OnSmartQClickListener smartQClickListener; // Поле для слушателя
 
     private Main_menu mainMenu = new Main_menu();
-
     private News news = new News();
 
     @Override
@@ -54,8 +57,9 @@ public class Mainmenu extends Fragment {
         view.findViewById(R.id.layout2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SmartIQ.class);
-                startActivity(intent);
+                if (smartQClickListener != null) {
+                    smartQClickListener.onSmartQClicked();
+                }
             }
         });
 
@@ -87,5 +91,17 @@ public class Mainmenu extends Fragment {
         ft.replace(R.id.mainmenu_frame, fragment);
         ft.addToBackStack(null);
         ft.commit();
+    }
+
+    // Метод для установки слушателя
+    public void setOnSmartQClickListener(OnSmartQClickListener listener) {
+        this.smartQClickListener = listener;
+    }
+
+    // Метод для вызова события извне
+    public void performSmartQClick() {
+        if (smartQClickListener != null) {
+            smartQClickListener.onSmartQClicked();
+        }
     }
 }
