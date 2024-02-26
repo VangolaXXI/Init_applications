@@ -11,6 +11,7 @@ public class SmartQ extends Fragment {
     public interface OnSmartQButtonClickListener {
         void onSmartQButtonClicked(Mainmenu mainmenu);
         void onLeaderboardButtonClick();
+        void onSettingsButtonClick();
     }
 
     private Mainmenu mainmenu;
@@ -25,15 +26,23 @@ public class SmartQ extends Fragment {
         btMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onButtonClick();
+                onMainButtonClick();
             }
         });
 
-        Button btTab = view.findViewById(R.id.bt_tb );
+        Button btTab = view.findViewById(R.id.bt_tb);
         btTab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onTabButtonClick();
+            }
+        });
+
+        Button btSettings = view.findViewById(R.id.bt_st);
+        btSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSettingsButtonClick();
             }
         });
 
@@ -44,7 +53,7 @@ public class SmartQ extends Fragment {
         this.smartQButtonClickListener = listener;
     }
 
-    private void onButtonClick() {
+    private void onMainButtonClick() {
         if (smartQButtonClickListener != null && mainmenu != null) {
             smartQButtonClickListener.onSmartQButtonClicked(mainmenu);
         }
@@ -53,6 +62,12 @@ public class SmartQ extends Fragment {
     private void onTabButtonClick() {
         if (smartQButtonClickListener != null) {
             smartQButtonClickListener.onLeaderboardButtonClick();
+        }
+    }
+
+    private void onSettingsButtonClick() {
+        if (smartQButtonClickListener != null) {
+            smartQButtonClickListener.onSettingsButtonClick();
         }
     }
 

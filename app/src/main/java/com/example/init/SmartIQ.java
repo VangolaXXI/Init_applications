@@ -36,10 +36,10 @@ public class SmartIQ extends AppCompatActivity {
 //                    // Запуск активити
 //                    startActivity(intent);
 //                    finish();
-                } else if (viewId == R.id.bt_tb) {
-                    Intent intent = new Intent(SmartIQ.this, Table_top.class);
-                    startActivity(intent);
-                    finish();
+//                } else if (viewId == R.id.bt_tb) {
+//                    Intent intent = new Intent(SmartIQ.this, Table_top.class);
+//                    startActivity(intent);
+//                    finish();
                 } else if (viewId == R.id.bt_st) {
 //                    Intent intent = new Intent(SmartIQ.this, persanal_card.class);
 //                    startActivity(intent);

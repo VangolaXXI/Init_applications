@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="#030840">
+
+    <TextView
+
+        android:id="@+id/tv_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Настройки"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center|top" />
+
+<LinearLayout
+    android:layout_width="320dp"
+    android:layout_height="480dp"
+    android:layout_gravity="center|top"
+    android:layout_marginTop="195dp"
+    android:orientation="vertical"
+    android:padding="30dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/frame_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top">
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/bt_sound"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Звук"
+            android:textSize="25dp"
+            android:drawablePadding="-40dp"
+            android:paddingStart="20dp"
+            android:drawableStart="@drawable/voice_icon"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:background="@drawable/button_style"
+            android:foreground="@drawable/animated_button"
+            />
+
+        <Switch
+            android:id="@+id/sButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:trackTint="@color/white"
+            android:thumbTint="#00BCD4"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </RelativeLayout>
+
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_lg"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Язык"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:drawablePadding="-40dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/languech_icon"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"/>
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_theme"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Тема"
+        android:textSize="25sp"
+        android:drawablePadding="-40dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/theme_icon"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/bt_back"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:text="Назад"
+        android:textSize="25sp"
+        android:drawablePadding="-40dp"
+        android:paddingStart="20dp"
+        android:drawableStart="@drawable/back_icon"
+        android:fontFamily="@font/leaguespartanbold_ru"
+        android:background="@drawable/button_style"
+        android:foreground="@drawable/animated_button"
+        />
+</LinearLayout>
+
+
+</FrameLayout>

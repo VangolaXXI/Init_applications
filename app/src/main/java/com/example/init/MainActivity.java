@@ -2,6 +2,7 @@ package com.example.init;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -79,4 +80,26 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
                 .addToBackStack(null)
                 .commit();
     }
+    @Override
+    public void onSettingsButtonClick() {
+        // Создаем экземпляр фрагмента Settings
+        Settings settingsFragment = new Settings();
+
+        // Создаем транзакцию для замены текущего фрагмента на фрагмент Settings
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        // Задаем анимацию для входа (отображения) нового фрагмента
+        transaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right,
+                android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
+        // Заменяем текущий фрагмент на фрагмент Settings с заданной анимацией
+        transaction.replace(R.id.basic_frame, settingsFragment);
+
+        // Добавляем транзакцию в стек возврата
+        transaction.addToBackStack(null);
+
+        // Применяем транзакцию
+        transaction.commit();
+    }
+
 }
