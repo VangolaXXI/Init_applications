@@ -10,6 +10,7 @@ import android.widget.Button;
 public class SmartQ extends Fragment {
     public interface OnSmartQButtonClickListener {
         void onSmartQButtonClicked(Mainmenu mainmenu);
+        void onLeaderboardButtonClick();
     }
 
     private Mainmenu mainmenu;
@@ -28,6 +29,14 @@ public class SmartQ extends Fragment {
             }
         });
 
+        Button btTab = view.findViewById(R.id.bt_tb );
+        btTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onTabButtonClick();
+            }
+        });
+
         return view;
     }
 
@@ -38,6 +47,12 @@ public class SmartQ extends Fragment {
     private void onButtonClick() {
         if (smartQButtonClickListener != null && mainmenu != null) {
             smartQButtonClickListener.onSmartQButtonClicked(mainmenu);
+        }
+    }
+
+    private void onTabButtonClick() {
+        if (smartQButtonClickListener != null) {
+            smartQButtonClickListener.onLeaderboardButtonClick();
         }
     }
 

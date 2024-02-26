@@ -8,8 +8,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
+public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked, Mainmenu.OnSmartQClickListener, SmartQ.OnSmartQButtonClickListener {
 
-public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked,Mainmenu.OnSmartQClickListener,SmartQ.OnSmartQButtonClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
                 .commit();
     }
 
-
     @Override
     public void onSmartQClicked() {
+        // Пользователь нажал на кнопку в MainmenuFragment, открываем SmartQFragment
         Mainmenu mainmenu = (Mainmenu) getSupportFragmentManager().findFragmentByTag("MainmenuFragment");
         if (mainmenu != null) {
             SmartQ smartQ = new SmartQ();
@@ -61,11 +61,21 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
         }
     }
 
-
     @Override
     public void onSmartQButtonClicked(Mainmenu mainmenu) {
+        // Пользователь нажал на кнопку в SmartQFragment, возвращаемся к MainmenuFragment
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.basic_frame, mainmenu)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void onLeaderboardButtonClick() {
+        // Открываем LeaderboardFragment
+        Leaderboard leaderboardFragment = new Leaderboard();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.basic_frame, leaderboardFragment)
                 .addToBackStack(null)
                 .commit();
     }
