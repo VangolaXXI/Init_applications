@@ -41,7 +41,7 @@ public class Mainmenu extends Fragment {
         currentIcon3 = imageView3.getDrawable();
         currentIcon4 = imageView4.getDrawable();
 
-        setNewFragment(news);
+        setNewFragment(mainMenu);
 
         // Установка обработчиков событий для кликов по различным элементам в макете
         view.findViewById(R.id.layout1).setOnClickListener(new View.OnClickListener() {

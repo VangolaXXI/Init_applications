@@ -48,10 +48,10 @@ public class persanal_card extends AppCompatActivity {
             imageView1.setImageDrawable(originalIcon1);
             imageView3.setImageDrawable(currentIcon3);
             imageView4.setImageDrawable(currentIcon4);
-        } else if (viewId == R.id.layout2) {
-            Intent intent = new Intent(this, SmartIQ.class);
-            startActivity(intent);
-            finish();
+//        } else if (viewId == R.id.layout2) {
+//            Intent intent = new Intent(this, );
+//            startActivity(intent);
+//            finish();
         } else if (viewId == R.id.layout3) {
             setNewFragment(news);
             imageView1.setImageDrawable(getResources().getDrawable(R.drawable.home));

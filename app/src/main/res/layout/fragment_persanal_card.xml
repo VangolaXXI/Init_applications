@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Main_menu"
     android:orientation="vertical"
-    android:background="@drawable/liner_gradient">
+    >
 
 
     <TextView

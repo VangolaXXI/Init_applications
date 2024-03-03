@@ -1,15 +1,11 @@
 package com.example.init;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked, Mainmenu.OnSmartQClickListener, SmartQ.OnSmartQButtonClickListener {
+public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked, Mainmenu.OnSmartQClickListener, SmartIQ.OnSmartQButtonClickListener {
 
 
     @Override
@@ -52,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
         // Пользователь нажал на кнопку в MainmenuFragment, открываем SmartQFragment
         Mainmenu mainmenu = (Mainmenu) getSupportFragmentManager().findFragmentByTag("MainmenuFragment");
         if (mainmenu != null) {
-            SmartQ smartQ = new SmartQ();
+            SmartIQ smartQ = new SmartIQ();
             smartQ.setOnSmartQButtonClickListener(this);
             smartQ.setMainmenu(mainmenu); // передаем существующий экземпляр Mainmenu
             getSupportFragmentManager().beginTransaction()

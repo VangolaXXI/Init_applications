@@ -3,16 +3,299 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".News">
+    tools:context=".News"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
         android:text="Новости"
-        android:layout_gravity="center"
-        android:textSize="30dp"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
         android:fontFamily="@font/spartanmb_extrabold"
-        android:textColor="#FFFFFF" />
+        android:layout_gravity="center|top"
+        android:layout_marginTop="110dp" />
+
+    <FrameLayout
+        android:layout_width="345dp"
+        android:layout_height="422dp"
+        android:layout_marginTop="180dp"
+        android:layout_gravity="top|center">
+
+        <!-- Первое изображение в верхнем левом углу -->
+        <FrameLayout
+            android:layout_width="141dp"
+            android:layout_height="193dp">
+
+            <!-- Изображение -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spidey"
+                android:scaleType="centerCrop" />
+
+            <!-- Блок с цветом и текстом -->
+            <LinearLayout
+                android:layout_width="21dp"
+                android:layout_height="34dp"
+                android:background="#1C1A46"
+                android:padding="1dp"
+                android:layout_gravity="top|start">
+
+                <!-- Текст -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="31 окт 2024"
+                    android:textColor="#FFFFFF"
+                    android:textSize="7sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <!-- Дополнительный блок с текстом внизу -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:background="#1C1A46">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:text="Человек паук терроризирует город"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+
+                    />
+            <Button
+                android:id="@+id/news_button_1"
+                android:layout_width="100dp"
+                android:layout_height="26dp"
+                android:padding="3dp"
+                android:text="Подробно"
+                android:textColor="#ffffff"
+                android:textSize="6sp"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:backgroundTint="#221E76"
+                android:layout_gravity="center"
+                />
+
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Второе изображение в верхнем правом углу -->
+        <FrameLayout
+            android:layout_width="141dp"
+            android:layout_height="193dp"
+            android:layout_gravity="top|end">
+            <!-- Изображение -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spidey"
+                android:scaleType="centerCrop" />
+
+            <!-- Блок с цветом и текстом -->
+            <LinearLayout
+                android:layout_width="21dp"
+                android:layout_height="34dp"
+                android:background="#1C1A46"
+                android:padding="1dp"
+                android:layout_gravity="top|start">
+
+                <!-- Текст -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="31 окт 2024"
+                    android:textColor="#FFFFFF"
+                    android:textSize="7sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <!-- Дополнительный блок с текстом внизу -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:background="#1C1A46">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:text="Человек паук терроризирует город"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+
+                    />
+                <Button
+                    android:id="@+id/news_button_2"
+                    android:layout_width="100dp"
+                    android:layout_height="26dp"
+                    android:padding="3dp"
+                    android:text="Подробно"
+                    android:textColor="#ffffff"
+                    android:textSize="6sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:backgroundTint="#221E76"
+                    android:layout_gravity="center"
+                    />
+
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Третье изображение в нижнем левом углу -->
+        <FrameLayout
+            android:layout_width="141dp"
+            android:layout_height="193dp"
+            android:layout_gravity="bottom|start">
+
+            <!-- Изображение -->
+            <!-- Изображение -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spidey"
+                android:scaleType="centerCrop" />
+
+            <!-- Блок с цветом и текстом -->
+            <LinearLayout
+                android:layout_width="21dp"
+                android:layout_height="34dp"
+                android:background="#1C1A46"
+                android:padding="1dp"
+                android:layout_gravity="top|start">
+
+                <!-- Текст -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="31 окт 2024"
+                    android:textColor="#FFFFFF"
+                    android:textSize="7sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <!-- Дополнительный блок с текстом внизу -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:background="#1C1A46">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:text="Человек паук терроризирует город"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+
+                    />
+                <Button
+                    android:id="@+id/news_button_3"
+                    android:layout_width="100dp"
+                    android:layout_height="26dp"
+                    android:padding="3dp"
+                    android:text="Подробно"
+                    android:textColor="#ffffff"
+                    android:textSize="6sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:backgroundTint="#221E76"
+                    android:layout_gravity="center"
+                    />
+
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Четвертое изображение в нижнем правом углу -->
+        <FrameLayout
+            android:layout_width="141dp"
+            android:layout_height="193dp"
+            android:layout_gravity="bottom|end">
+
+            <!-- Изображение -->
+            <!-- Изображение -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/spidey"
+                android:scaleType="centerCrop" />
+
+            <!-- Блок с цветом и текстом -->
+            <LinearLayout
+                android:layout_width="21dp"
+                android:layout_height="34dp"
+                android:background="#1C1A46"
+                android:padding="1dp"
+                android:layout_gravity="top|start">
+
+                <!-- Текст -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="31 окт 2024"
+                    android:textColor="#FFFFFF"
+                    android:textSize="7sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            <!-- Дополнительный блок с текстом внизу -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:background="#1C1A46">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:text="Человек паук терроризирует город"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+
+                    />
+                <Button
+                    android:id="@+id/news_button_4"
+                    android:layout_width="100dp"
+                    android:layout_height="26dp"
+                    android:padding="3dp"
+                    android:text="Подробно"
+                    android:textColor="#ffffff"
+                    android:textSize="6sp"
+                    android:fontFamily="@font/spartanmb_extrabold"
+                    android:backgroundTint="#221E76"
+                    android:layout_gravity="center"
+                    />
+
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
 
 </FrameLayout>

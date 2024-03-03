@@ -1,60 +1,92 @@
 package com.example.init;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
-public class SmartIQ extends AppCompatActivity {
-    private Button buttonMain;
-    private Button buttonNewgame;
-    private Button buttonTopweekend;
-    private Button buttonsettings;
+public class SmartIQ extends Fragment {
+    public interface OnSmartQButtonClickListener {
+        void onSmartQButtonClicked(Mainmenu mainmenu);
+        void onLeaderboardButtonClick();
+        void onSettingsButtonClick();
+    }
+
+    private Mainmenu mainmenu;
+    private OnSmartQButtonClickListener smartQButtonClickListener;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_smart_iq);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_smart_iq, container, false);
 
-        buttonMain = findViewById(R.id.bt_main);
-        buttonNewgame = findViewById(R.id.bt_new);
-        buttonTopweekend = findViewById(R.id.bt_tb);
-        buttonsettings = findViewById(R.id.bt_st);
-        setButtons();
-    }
-    private void setButtons() {
-
-        View.OnClickListener anotherButtonClickListener = new View.OnClickListener() {
+        Button btMain = view.findViewById(R.id.bt_main);
+        btMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int viewId = v.getId();
-                if (viewId == R.id.bt_new) {
-//                    // Создание Intent для открытия другой активити
-//                    Intent intent = new Intent(SmartIQ.this, persanal_card.class);
-//                    // Запуск активити
-//                    startActivity(intent);
-//                    finish();
-//                } else if (viewId == R.id.bt_tb) {
-//                    Intent intent = new Intent(SmartIQ.this, Table_top.class);
-//                    startActivity(intent);
-//                    finish();
-                } else if (viewId == R.id.bt_st) {
-//                    Intent intent = new Intent(SmartIQ.this, persanal_card.class);
-//                    startActivity(intent);
-//                    finish();
-                } else if (viewId == R.id.bt_main) {
-                    Intent intent = new Intent(SmartIQ.this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+                onMainButtonClick();
             }
-        };
-        buttonMain.setOnClickListener(anotherButtonClickListener);
-        buttonNewgame.setOnClickListener(anotherButtonClickListener);
-        buttonTopweekend.setOnClickListener(anotherButtonClickListener);
-        buttonsettings.setOnClickListener(anotherButtonClickListener);
+        });
+
+        Button btTab = view.findViewById(R.id.bt_tb);
+        btTab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onTabButtonClick();
+            }
+        });
+
+        Button btSettings = view.findViewById(R.id.bt_st);
+        btSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onSettingsButtonClick();
+            }
+        });
+
+        Button btNew = view.findViewById(R.id.bt_new);
+        btNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNewButtonClick();
+            }
+        });
+
+        return view;
     }
 
+    public void setOnSmartQButtonClickListener(OnSmartQButtonClickListener listener) {
+        this.smartQButtonClickListener = listener;
+    }
+
+    private void onMainButtonClick() {
+        if (smartQButtonClickListener != null && mainmenu != null) {
+            smartQButtonClickListener.onSmartQButtonClicked(mainmenu);
+        }
+    }
+
+    private void onTabButtonClick() {
+        if (smartQButtonClickListener != null) {
+            smartQButtonClickListener.onLeaderboardButtonClick();
+        }
+    }
+
+    private void onSettingsButtonClick() {
+        if (smartQButtonClickListener != null) {
+            smartQButtonClickListener.onSettingsButtonClick();
+        }
+    }
+
+    private void onNewButtonClick() {
+        // Создаем интент для запуска GameActivity
+        Intent intent = new Intent(getActivity(), Game.class);
+        startActivity(intent);
+    }
+
+    public void setMainmenu(Mainmenu mainmenu) {
+        this.mainmenu = mainmenu;
+    }
 }
