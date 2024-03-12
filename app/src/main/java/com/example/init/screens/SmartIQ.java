@@ -1,4 +1,4 @@
-package com.example.init;
+package com.example.init.screens;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.init.Game;
+import com.example.init.R;
 
 public class SmartIQ extends Fragment {
     public interface OnSmartQButtonClickListener {

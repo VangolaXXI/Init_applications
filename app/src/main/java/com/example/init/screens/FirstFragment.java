@@ -1,7 +1,8 @@
-package com.example.init;
+package com.example.init.screens;
 
 import android.annotation.SuppressLint;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.init.R;
 
 public class FirstFragment extends Fragment {
 
@@ -71,6 +74,12 @@ public class FirstFragment extends Fragment {
                 return false; // Возвращаем false, чтобы продолжить передавать событие дальше
             }
         });
+        final Drawable[] drawables = passwordEditText.getCompoundDrawablesRelative();
+
+        Drawable visibleIcon = getResources().getDrawable(R.drawable.panda_open);
+        Drawable hiddenIcon = getResources().getDrawable(R.drawable.panda_closed);
+
+
         passwordEditText.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -84,9 +93,10 @@ public class FirstFragment extends Fragment {
                         // Toggle password visibility
                         if (passwordEditText.getInputType() == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
                             passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], hiddenIcon, drawables[3]);
                         } else {
                             passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                        }
+                            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], visibleIcon, drawables[3]);                        }
 
                         // Restore text style
                         passwordEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
@@ -117,8 +127,8 @@ public class FirstFragment extends Fragment {
         String enteredUsername = usernameEditText.getText().toString();
         String enteredPassword = passwordEditText.getText().toString();
         // Предполагается, что у вас есть корректный логин и пароль
-        String correctUsername = "admin";
-        String correctPassword = "admin";
+        String correctUsername = "";
+        String correctPassword = "";
 
         if (enteredUsername.equals(correctUsername) && enteredPassword.equals(correctPassword)) {
             if (listener != null) {

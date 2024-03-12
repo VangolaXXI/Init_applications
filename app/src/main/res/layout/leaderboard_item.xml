@@ -1,0 +1,65 @@
+<!-- leaderboard_item.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="53dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_margin="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="15dp"
+    android:backgroundTint="@color/b4"
+
+
+    >
+
+    <LinearLayout
+        android:id="@+id/frame5.1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/spartanmb_extrabold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="4" />
+    </LinearLayout>
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Player032154654" />
+
+    <TextView
+        android:id="@+id/tv_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/spartanmb_extrabold"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="PIN-20-20" />
+
+
+</androidx.cardview.widget.CardView>

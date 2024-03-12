@@ -1,4 +1,4 @@
-package com.example.init;
+package com.example.init.screens;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.init.R;
 
 
 public class Main_menu extends Fragment {

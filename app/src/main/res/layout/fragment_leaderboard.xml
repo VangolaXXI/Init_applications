@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#030840"
-    tools:context=".Leaderboard">
+    android:background="@color/b5"
+    tools:context=".screens.Leaderboard">
 
     <TextView
         android:id="@+id/tv_tb"
@@ -23,7 +23,7 @@
         android:layout_height="155dp"
         android:layout_marginTop="80dp"
         android:orientation="vertical"
-        android:background="#2E2D72"
+        android:background="@color/b6"
         android:layout_gravity="center|top"
         >
 
@@ -63,281 +63,15 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="350dp"
-        android:layout_height="430dp"
-        android:layout_marginTop="260dp"
+        android:layout_height="466dp"
         android:layout_gravity="center|top"
-        android:orientation="vertical">
+        android:layout_marginTop="260dp"
+        android:background="#030840"
+        tools:listitem="@layout/leaderboard_item" />
 
-        <LinearLayout
-            android:id="@+id/frame2"
-            android:layout_width="347dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center|top"
-            android:background="#3F3E79"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/frame2.1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
-                android:background="#595FAE"
-                android:orientation="horizontal" />
-
-
-            <TextView
-                android:id="@+id/tv_number1"
-                android:layout_width="10dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="-30dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="1"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv_user2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="-33dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="Player032154654"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tv_user2.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="PIN-19-20"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/frame3"
-            android:layout_width="347dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="20dp"
-            android:background="#3F3E79"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/frame3.1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
-                android:background="#595FAE"
-                android:orientation="horizontal" />
-
-
-            <TextView
-                android:id="@+id/tv_number2"
-                android:layout_width="10dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="-30dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="2"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv_user3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="-33dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="Player03798652304"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tv_user3.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="IVT-18-20"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/frame4"
-            android:layout_width="347dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="20dp"
-            android:background="#3F3E79"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/frame4.1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
-                android:background="#595FAE"
-                android:orientation="horizontal" />
-
-
-            <TextView
-                android:id="@+id/tv_number3"
-                android:layout_width="10dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="-30dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="3"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv_user4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="-33dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="Player41115154654"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tv_user4.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="IST-20-20"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/frame5"
-            android:layout_width="347dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="20dp"
-            android:background="#3F3E79"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/frame5.1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
-                android:background="#595FAE"
-                android:orientation="horizontal" />
-
-
-            <TextView
-                android:id="@+id/tv_number4"
-                android:layout_width="10dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="-30dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="4"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv_user5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="-33dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="Player032154654"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tv_user5.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="PIN-20-20"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/frame6"
-            android:layout_width="347dp"
-            android:layout_height="53dp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="20dp"
-            android:background="#3F3E79"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/frame6.1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="10dp"
-                android:background="#595FAE"
-                android:orientation="horizontal" />
-
-
-            <TextView
-                android:id="@+id/tv_number5"
-                android:layout_width="10dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginTop="-30dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="5"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/tv_user6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="-33dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="Player0148794654"
-                android:textColor="@color/white"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tv_user6.1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:text="PIN-19-20"
-                android:textColor="@color/white"
-                android:textSize="12dp" />
-
-        </LinearLayout>
-    </LinearLayout>
     <Button
         style="@style/ButtonStyle"
         android:id="@+id/bt_back"

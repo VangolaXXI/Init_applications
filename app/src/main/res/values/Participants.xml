@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="item_numbers">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <!-- Добавьте остальные номера по аналогии -->
+    </string-array>
+    <string-array name="item_usernames">
+        <item>Садырова Албина</item>
+        <item>Кудайбергенов Бекуул</item>
+        <item>Бакытбекова Акжолтой</item>
+        <item>Утуров Эрик</item>
+        <item>Кашкароева Адэми</item>
+        <item>Ниязбеков Бакай</item>
+        <item>Болушев Илим</item>
+        <!-- Добавьте остальные имена пользователей по аналогии -->
+    </string-array>
+    <string-array name="item_pins">
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <item>PIN-19-20</item>
+        <!-- Добавьте остальные PIN-коды по аналогии -->
+    </string-array>
+</resources>

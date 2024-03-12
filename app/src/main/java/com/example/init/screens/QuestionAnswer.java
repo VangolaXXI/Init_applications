@@ -1,4 +1,4 @@
-package com.example.init;
+package com.example.init.screens;
 
 public class QuestionAnswer {
 

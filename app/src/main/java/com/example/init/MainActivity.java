@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
+
+import com.example.init.screens.FirstFragment;
+import com.example.init.screens.Leaderboard;
+import com.example.init.screens.Mainmenu;
+import com.example.init.screens.Settings;
+import com.example.init.screens.SmartIQ;
+import com.example.init.screens.StartMenu;
 
 public class MainActivity extends AppCompatActivity implements StartMenu.OnStartMenuButtonClicked, FirstFragment.OnFirstFragmentButtonClicked, Mainmenu.OnSmartQClickListener, SmartIQ.OnSmartQButtonClickListener {
     @Override
