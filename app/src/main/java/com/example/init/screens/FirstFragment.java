@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.init.R;
@@ -127,17 +128,28 @@ public class FirstFragment extends Fragment {
         String enteredUsername = usernameEditText.getText().toString();
         String enteredPassword = passwordEditText.getText().toString();
         // Предполагается, что у вас есть корректный логин и пароль
-        String correctUsername = "";
-        String correctPassword = "";
+        String correctUsername = "admin";
+        String correctPassword = "admin";
 
         if (enteredUsername.equals(correctUsername) && enteredPassword.equals(correctPassword)) {
             if (listener != null) {
                 listener.onFirstFragmentButtonClick();
+            // Очистить поля ввода после успешного входа
+                usernameEditText.setText("");
+                passwordEditText.setText("");
             }
         } else {
             // Если логин или пароль неправильные, отобразить сообщение об ошибке
             Toast.makeText(getContext(), "Неправильный логин или пароль", Toast.LENGTH_SHORT).show();
+
+            // Изменяем цвет текста на красный
+            usernameEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
+            passwordEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
+            loginButton.setBackgroundResource(R.drawable.btn_incorrect);
+
         }
+
+
     }
 
     public void setOnFirstFragmentButtonClickListener(OnFirstFragmentButtonClicked listener) {

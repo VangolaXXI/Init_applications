@@ -48,7 +48,7 @@ public class Mainmenu extends Fragment {
         view.findViewById(R.id.layout1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setNewFragment(news);
+                setNewFragment(mainMenu);
                 imageView1.setImageDrawable(originalIcon1);
                 imageView3.setImageDrawable(currentIcon3);
                 imageView4.setImageDrawable(currentIcon4);

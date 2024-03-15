@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#1C1A46"
+
     >
     <FrameLayout
         android:id="@+id/basic_frame"

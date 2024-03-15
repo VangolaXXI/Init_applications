@@ -17,12 +17,12 @@
         android:textColor="#FFFFFF"
         android:fontFamily="@font/spartanmb_extrabold"
         android:textSize="18sp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         />
 
     <View
         android:layout_gravity="center|top"
-        android:layout_marginTop="139dp"
+        android:layout_marginTop="109dp"
         android:layout_width="156dp"
         android:layout_height="2dp"
         android:background="#2B969D"
@@ -30,7 +30,7 @@
 
     <LinearLayout
         android:id="@+id/frame_container1"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="122dp"
         android:layout_gravity="top|center"
         android:layout_width="358dp"
         android:layout_height="239dp"
@@ -55,6 +55,39 @@
             android:text="Асанов Мирлан Мирланович\nФакультет ИНИТ\nгр. ПИн - 19 - 20\nasanov123@gmail.com\n20/13589"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="358dp"
+        android:layout_height="300dp"
+        android:background="@drawable/frame_liner_gradient"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="385dp"
+        android:padding="15dp"
+        android:paddingStart="24dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Расписание"
+            android:textColor="@color/white"
+            android:fontFamily="@font/spartanmb_extrabold"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пн   Вт  Ср  Чт  Пт  СБ"
+            android:textColor="@color/white"
+            android:fontFamily="@font/spartanmb_extrabold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+
+            />
+
 
 
     </LinearLayout>

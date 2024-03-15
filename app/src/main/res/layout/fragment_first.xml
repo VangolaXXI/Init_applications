@@ -47,8 +47,6 @@
 
         />
 
-
-
     <EditText
         style="@style/Boldstyle"
         android:id="@+id/passwordEditText"

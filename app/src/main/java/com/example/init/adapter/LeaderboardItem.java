@@ -4,7 +4,7 @@ public class LeaderboardItem {
     private String username;
     private String group;
 
-    public LeaderboardItem(int number, String username, String pin) {
+    public LeaderboardItem(int number, String username, String group) {
         this.number = number;
         this.username = username;
         this.group = group;

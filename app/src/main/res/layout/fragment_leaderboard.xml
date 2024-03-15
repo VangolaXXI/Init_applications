@@ -66,11 +66,18 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="350dp"
-        android:layout_height="466dp"
+        android:layout_height="434dp"
         android:layout_gravity="center|top"
         android:layout_marginTop="260dp"
         android:background="#030840"
-        tools:listitem="@layout/leaderboard_item" />
+        tools:listitem="@layout/leaderboard_item"
+
+        android:fadeScrollbars="false"
+        android:scrollbarSize="9dp"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_style"
+        android:scrollbars="vertical"
+
+        />
 
     <Button
         style="@style/ButtonStyle"

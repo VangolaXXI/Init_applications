@@ -38,6 +38,7 @@ public class Leaderboard extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new LeaderboardAdapter(leaderboardItems);
         recyclerView.setAdapter(adapter);
+        recyclerView.setScrollBarStyle(View.SCROLLBARS_INSIDE_INSET);
 
         Button btBack = view.findViewById(R.id.bt_back);
         btBack.setOnClickListener(new View.OnClickListener() {

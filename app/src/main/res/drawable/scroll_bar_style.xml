@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Декоративный слой (ползунок) -->
+    <item android:id="@android:id/progress">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" />
+            <solid android:color="@color/white" />
+            <!-- Установите размер декоративного слоя вручную или каким-либо другим способом -->
+            <size android:width="9dp" />
+        </shape>
+    </item>
+
+
+
+</layer-list>
