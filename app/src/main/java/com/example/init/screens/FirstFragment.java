@@ -1,11 +1,14 @@
 package com.example.init.screens;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -23,6 +26,14 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.init.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 public class FirstFragment extends Fragment {
 
@@ -51,7 +62,7 @@ public class FirstFragment extends Fragment {
         usernameEditText.setTextAppearance(getContext(), R.style.Boldstyle);
         passwordEditText.setTextAppearance(getContext(), R.style.Boldstyle);
         passwordEditText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         usernameEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -97,7 +108,8 @@ public class FirstFragment extends Fragment {
                             passwordEditText.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], hiddenIcon, drawables[3]);
                         } else {
                             passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-                            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], visibleIcon, drawables[3]);                        }
+                            passwordEditText.setCompoundDrawablesWithIntrinsicBounds(drawables[0], drawables[1], visibleIcon, drawables[3]);
+                        }
 
                         // Restore text style
                         passwordEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
@@ -127,31 +139,87 @@ public class FirstFragment extends Fragment {
     private void performLogin() {
         String enteredUsername = usernameEditText.getText().toString();
         String enteredPassword = passwordEditText.getText().toString();
-        // Предполагается, что у вас есть корректный логин и пароль
-        String correctUsername = "admin";
-        String correctPassword = "admin";
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+        StorageReference userPhotosRef = storageRef.child("user_photos");
 
-        if (enteredUsername.equals(correctUsername) && enteredPassword.equals(correctPassword)) {
-            if (listener != null) {
-                listener.onFirstFragmentButtonClick();
-            // Очистить поля ввода после успешного входа
-                usernameEditText.setText("");
-                passwordEditText.setText("");
-            }
-        } else {
-            // Если логин или пароль неправильные, отобразить сообщение об ошибке
-            Toast.makeText(getContext(), "Неправильный логин или пароль", Toast.LENGTH_SHORT).show();
+        // Ссылка на вашу коллекцию в Firestore
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .whereEqualTo("username", enteredUsername) // Ищем пользователя по имени
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful() && task.getResult() != null) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                String correctPassword = document.getString("password");
+                                // Сравниваем введенный пароль с корректным паролем из базы данных
+                                if (enteredPassword.equals(correctPassword)) {
+                                    // Успешный вход
+                                    if (listener != null) {
+                                        // Получаем остальные данные из документа
+                                        String fullname = document.getString("Fullname");
+                                        String group = document.getString("group");
+                                        String birthday = document.getString("birthday");
+                                        String email = document.getString("email");
+                                        String inn = document.getString("INN");
 
-            // Изменяем цвет текста на красный
-            usernameEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
-            passwordEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
-            loginButton.setBackgroundResource(R.drawable.btn_incorrect);
+                                        String photoUrl = document.getString("photoUrl");
 
-        }
 
+
+                                        SharedPreferences sp = requireContext().getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sp.edit();
+
+                                        // Сохраняем данные в SharedPreferences
+                                        if (fullname != null) {
+                                            editor.putString("Fullname", fullname);
+                                        }
+                                        if (group != null) {
+                                            editor.putString("group", group);
+                                        }
+                                        if (birthday != null) {
+                                            editor.putString("birthday", birthday);
+                                        }
+                                        if (email != null) {
+                                            editor.putString("email", email);
+                                        }
+                                        if (inn != null) {
+                                            editor.putString("INN", inn);
+                                        }
+                                        if (photoUrl != null) {
+                                            editor.putString("photoUrl", photoUrl);
+                                        }
+
+// Фиксируем изменения
+                                        editor.commit();
+
+
+
+                                        listener.onFirstFragmentButtonClick();
+                                        // Очистить поля ввода после успешного входа
+                                        usernameEditText.setText("");
+                                        passwordEditText.setText("");
+                                    }
+                                    return; // Завершаем цикл, если найден корректный пользователь
+                                }
+                            }
+                            // Если не найдено совпадение пароля для введенного имени пользователя
+                            Toast.makeText(getContext(), "Неправильный пароль", Toast.LENGTH_SHORT).show();
+                            // Изменяем цвет текста на красный
+                            passwordEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
+                            loginButton.setBackgroundResource(R.drawable.btn_incorrect);
+                        } else {
+                            // Пользователь с таким именем не найден
+                            Toast.makeText(getContext(), "Пользователь не найден", Toast.LENGTH_SHORT).show();
+                            // Изменяем цвет текста на красный
+                            usernameEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
+                            loginButton.setBackgroundResource(R.drawable.btn_incorrect);
+                        }
+                    }
+                });
 
     }
-
     public void setOnFirstFragmentButtonClickListener(OnFirstFragmentButtonClicked listener) {
         this.listener = listener;
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/liner_gradient"
     android:padding="24dp"
-    tools:context=".Game">
+    tools:context=".game.Game">
 
 
     <ImageView

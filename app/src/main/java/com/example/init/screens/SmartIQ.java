@@ -8,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.init.Game;
+import com.example.init.game.Game;
 import com.example.init.R;
+import com.example.init.game.playActivity;
 
 public class SmartIQ extends Fragment {
     public interface OnSmartQButtonClickListener {
@@ -85,7 +86,7 @@ public class SmartIQ extends Fragment {
 
     private void onNewButtonClick() {
         // Создаем интент для запуска GameActivity
-        Intent intent = new Intent(getActivity(), Game.class);
+        Intent intent = new Intent(getActivity(), playActivity.class);
         startActivity(intent);
     }
 

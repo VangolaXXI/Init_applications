@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "756698774641",
+    "project_id": "init-bc22d",
+    "storage_bucket": "init-bc22d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756698774641:android:5a16a377024f0275fdafd0",
+        "android_client_info": {
+          "package_name": "com.example.init"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAbzL6HqQzsvVdHvu5crGo1KN9BsyWckE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

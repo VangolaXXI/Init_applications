@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.os.Parcelable;
 
+import com.bumptech.glide.Glide;
 import com.example.init.screens.FirstFragment;
 import com.example.init.screens.Leaderboard;
 import com.example.init.screens.Mainmenu;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements StartMenu.OnStart
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // Отображаем стартовый фрагмент
         StartMenu startMenu = new StartMenu();

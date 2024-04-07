@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screens.Main_menu"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.persanalcard"
+    android:orientation="vertical">
 
 
     <TextView
@@ -28,7 +28,7 @@
         android:background="#2B969D"
         />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/frame_container1"
         android:layout_marginTop="122dp"
         android:layout_gravity="top|center"
@@ -36,28 +36,100 @@
         android:layout_height="239dp"
         android:background="@drawable/frame_liner_gradient">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/circleImageView"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="top|start"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/circle" />
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:civ_border_overlay="true"
+            android:src="@drawable/logo_main"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="35dp"
+            />
+
 
         <TextView
+            android:id="@+id/fullnameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/leaguespartanbold_ru"
-            android:lineSpacingExtra="24dp"
-            android:text="Асанов Мирлан Мирланович\nФакультет ИНИТ\nгр. ПИн - 19 - 20\nasanov123@gmail.com\n20/13589"
+            android:text="Fullname"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/initTextView"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fullnameTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:text="Институт новых информационных технологий"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/groupTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/initTextView"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:text="group"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/birthdayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:text="birthday"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthdayTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:text="email"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/innTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailTextView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/circleImageView"
+            android:fontFamily="@font/leaguespartanbold_ru"
+            android:text="INN"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
 
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="358dp"

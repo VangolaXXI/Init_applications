@@ -23,7 +23,7 @@ public class Mainmenu extends Fragment {
     private Drawable currentIcon1, currentIcon3, currentIcon4;
     private OnSmartQClickListener smartQClickListener; // Поле для слушателя
 
-    private Main_menu mainMenu = new Main_menu();
+    private persanalcard mainMenu = new persanalcard();
     private News news = new News();
 
     @Override

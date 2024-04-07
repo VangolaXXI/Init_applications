@@ -9,4 +9,8 @@
     <color name="b5">#030840</color>
     <color name="b6">#2E2D72</color>
     <color name="incorrect">#F70000</color>
+
+
+    <color name="primary_color">#565cce</color>
+
 </resources>

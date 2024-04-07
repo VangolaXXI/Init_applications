@@ -1,6 +1,6 @@
 <!-- button_rounded.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="#3F3E79" />
-    <corners android:radius="45dp" />
+    <solid android:color="@color/b3" />
+    <corners android:radius="50dp" />
 </shape>
