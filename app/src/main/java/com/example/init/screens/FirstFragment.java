@@ -163,7 +163,7 @@ public class FirstFragment extends Fragment {
                                         String birthday = document.getString("birthday");
                                         String email = document.getString("email");
                                         String inn = document.getString("INN");
-
+                                        String username = document.getString("username");
                                         String photoUrl = document.getString("photoUrl");
 
 
@@ -190,6 +190,9 @@ public class FirstFragment extends Fragment {
                                         if (photoUrl != null) {
                                             editor.putString("photoUrl", photoUrl);
                                         }
+                                        if (username != null) {
+                                            editor.putString("username", username);
+                                        }
 
 // Фиксируем изменения
                                         editor.commit();
@@ -205,9 +208,10 @@ public class FirstFragment extends Fragment {
                                 }
                             }
                             // Если не найдено совпадение пароля для введенного имени пользователя
-                            Toast.makeText(getContext(), "Неправильный пароль", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Неправильный логин или пароль", Toast.LENGTH_SHORT).show();
                             // Изменяем цвет текста на красный
                             passwordEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
+                            usernameEditText.setTextColor(ContextCompat.getColor(getContext(), R.color.incorrect));
                             loginButton.setBackgroundResource(R.drawable.btn_incorrect);
                         } else {
                             // Пользователь с таким именем не найден

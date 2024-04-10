@@ -28,9 +28,19 @@
         android:background="#2B969D"
         />
 
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_marginTop="122dp"
+        android:layout_gravity="top|center"
+        android:layout_width="358dp"
+        android:layout_height="239dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        >
+
     <RelativeLayout
         android:id="@+id/frame_container1"
-        android:layout_marginTop="122dp"
         android:layout_gravity="top|center"
         android:layout_width="358dp"
         android:layout_height="239dp"
@@ -57,10 +67,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="Fullname"
             android:textColor="#FFFFFF"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/initTextView"
@@ -68,9 +78,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/fullnameTextView"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="Институт новых информационных технологий"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
@@ -80,10 +90,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/initTextView"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="group"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
@@ -94,9 +104,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/groupTextView"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="birthday"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
@@ -107,9 +117,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/birthdayTextView"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="email"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
@@ -120,9 +130,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/emailTextView"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
-            android:fontFamily="@font/leaguespartanbold_ru"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="INN"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
@@ -130,39 +140,151 @@
 
 
     </RelativeLayout>
-
-    <LinearLayout
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_marginTop="385dp"
+        android:layout_gravity="top|center"
+        android:layout_width="358dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="10dp"
+        >
+    <RelativeLayout
         android:layout_width="358dp"
         android:layout_height="300dp"
         android:background="@drawable/frame_liner_gradient"
         android:layout_gravity="top|center"
-        android:layout_marginTop="385dp"
-        android:padding="15dp"
-        android:paddingStart="24dp"
+        android:padding="10dp"
+        android:paddingStart="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:orientation="vertical"
         >
+
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/spartanmb_extrabold"
             android:text="Расписание"
             android:textColor="@color/white"
-            android:fontFamily="@font/spartanmb_extrabold"
-            android:textSize="18sp"
-            />
-        <TextView
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Пн   Вт  Ср  Чт  Пт  СБ"
-            android:textColor="@color/white"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/textMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Пн"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textMon"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Вт"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textTue"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Ср"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textWed"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Чт"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textThu"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Пт"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textSat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/textFri"
+                android:fontFamily="@font/spartanmb_extrabold"
+                android:text="Сб"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scheduleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/emptyMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/scheduleView"
+            android:layout_alignTop="@+id/scheduleView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Сегодня нету пар отдыхай!"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-
-            />
-
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:visibility="gone" />
 
 
-    </LinearLayout>
-
-
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 </FrameLayout>
