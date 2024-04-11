@@ -26,6 +26,8 @@ public class Mainmenu extends Fragment {
     private persanalcard mainMenu = new persanalcard();
     private News news = new News();
 
+    private student_pass studticket = new student_pass();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mainmenu, container, false);
@@ -77,7 +79,7 @@ public class Mainmenu extends Fragment {
         view.findViewById(R.id.layout4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setNewFragment(mainMenu);
+                setNewFragment(studticket);
                 imageView1.setImageDrawable(getResources().getDrawable(R.drawable.home));
                 imageView3.setImageDrawable(currentIcon3);
                 imageView4.setImageDrawable(originalIcon4);

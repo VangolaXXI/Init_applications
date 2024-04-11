@@ -18,6 +18,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sccore">Счет :</string>
     <string name="exit">Выход</string>
+    <string name="studticket">Студенческий билет</string>
+    <string name="arabaeva">Кыргызский Государственный Университет им.Арабаева</string>
+    <string name="fullname">Fullname</string>
+    <string name="group">group</string>
+    <string name="birthday">birthday</string>
+    <string name="email">email</string>
+    <string name="inn">INN</string>
+    <string name="studid">ID Студента</string>
     <!--    <string name=""></string>-->
     <!--    <string name=""></string>-->
 

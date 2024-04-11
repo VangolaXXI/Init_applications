@@ -68,7 +68,7 @@
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="Fullname"
+            android:text="@string/fullname"
             android:textColor="#FFFFFF"
             android:textSize="16sp" />
 
@@ -81,7 +81,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="Институт новых информационных технологий"
+            android:text="@string/INIT"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
 
@@ -94,7 +94,7 @@
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="group"
+            android:text="@string/group"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
 
@@ -107,7 +107,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="birthday"
+            android:text="@string/birthday"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
 
@@ -120,7 +120,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="email"
+            android:text="@string/email"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
 
@@ -133,7 +133,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/circleImageView"
             android:fontFamily="@font/spartanmb_extrabold"
-            android:text="INN"
+            android:text="@string/inn"
             android:textColor="#FFFFFF"
             android:textSize="15sp" />
 

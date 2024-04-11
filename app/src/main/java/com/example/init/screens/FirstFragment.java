@@ -165,6 +165,9 @@ public class FirstFragment extends Fragment {
                                         String inn = document.getString("INN");
                                         String username = document.getString("username");
                                         String photoUrl = document.getString("photoUrl");
+                                        String data_start = document.getString("data_start");
+                                        String data_end = document.getString("data_end");
+                                        String direction = document.getString("direction");
 
 
 
@@ -193,6 +196,16 @@ public class FirstFragment extends Fragment {
                                         if (username != null) {
                                             editor.putString("username", username);
                                         }
+                                        if (data_start != null) {
+                                            editor.putString("data_start", data_start);
+                                        }
+                                        if (data_start != null) {
+                                            editor.putString("data_end", data_end);
+                                        }
+                                        if (direction != null) {
+                                            editor.putString("direction", direction);
+                                        }
+
 
 // Фиксируем изменения
                                         editor.commit();
