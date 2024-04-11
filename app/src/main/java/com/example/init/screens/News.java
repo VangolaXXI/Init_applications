@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.init.R;
@@ -50,36 +51,36 @@ public class News extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
-        Button button1 = view.findViewById(R.id.news_button_1);
-        Button button2 = view.findViewById(R.id.news_button_2);
-        Button button3 = view.findViewById(R.id.news_button_3);
-        Button button4 = view.findViewById(R.id.news_button_4);
+        FrameLayout FrameLayout1 = view.findViewById(R.id.news_button_1);
+        FrameLayout FrameLayout2 = view.findViewById(R.id.news_button_2);
+        FrameLayout frameLayout3 = view.findViewById(R.id.news_button_3);
+        FrameLayout FrameLayout4 = view.findViewById(R.id.news_button_4);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        FrameLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLink("https://www.youtube.com");
+                openLink("https://www.youtube.com/watch?si=JXpDwew85UnvWjhs&v=1OzGrXpuw54&feature=youtu.be");
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        FrameLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLink("https://www.example.com/link2");
+                openLink("https://init.arabaevksu.edu.kg/novosti/zhmti-zhalpy-professorduk-okutuuchular-zhamaaty-kyz-zhigit-sarmerden-oyunu-uyushturuldu/");
             }
         });
 
-        button3.setOnClickListener(new View.OnClickListener() {
+        frameLayout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLink("https://www.example.com/link3");
+                openLink("https://init.arabaevksu.edu.kg/novosti/27-11-23g-uchastvovali-v-gostevoj-lekczii-na-t/");
             }
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
+        FrameLayout4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLink("https://www.example.com/link4");
+                openLink("https://init.arabaevksu.edu.kg/novosti/kmuda-yunyj-programmist-attuu-konkurs-өtүүdө/");
             }
         });
 

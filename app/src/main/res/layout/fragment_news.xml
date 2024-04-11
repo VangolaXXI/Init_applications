@@ -25,6 +25,7 @@
 
         <!-- Первое изображение в верхнем левом углу -->
         <FrameLayout
+            android:id="@+id/news_button_1"
             android:layout_width="141dp"
             android:layout_height="193dp">
 
@@ -32,7 +33,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/spidey"
+                android:src="@drawable/news4"
                 android:scaleType="centerCrop" />
 
             <!-- Блок с цветом и текстом -->
@@ -67,23 +68,12 @@
                     android:gravity="center"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/spartanmb_extrabold"
-                    android:text="Человек паук терроризирует город"
+                    android:text="Открытие конкурса на создание фирменного стиля ИНИТ"
                     android:textColor="#fff"
                     android:textSize="12sp"
 
                     />
-            <Button
-                android:id="@+id/news_button_1"
-                android:layout_width="100dp"
-                android:layout_height="26dp"
-                android:padding="3dp"
-                android:text="Подробно"
-                android:textColor="#ffffff"
-                android:textSize="6sp"
-                android:fontFamily="@font/spartanmb_extrabold"
-                android:backgroundTint="#221E76"
-                android:layout_gravity="center"
-                />
+
 
 
 
@@ -92,6 +82,7 @@
 
         <!-- Второе изображение в верхнем правом углу -->
         <FrameLayout
+            android:id="@+id/news_button_2"
             android:layout_width="141dp"
             android:layout_height="193dp"
             android:layout_gravity="top|end">
@@ -99,7 +90,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/spidey"
+                android:src="@drawable/news1"
                 android:scaleType="centerCrop" />
 
             <!-- Блок с цветом и текстом -->
@@ -134,23 +125,11 @@
                     android:gravity="center"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/spartanmb_extrabold"
-                    android:text="Человек паук терроризирует город"
+                    android:text="ЖМТИ Кыз-жигит Сармерден оюну уюштурулду"
                     android:textColor="#fff"
                     android:textSize="12sp"
+                    />
 
-                    />
-                <Button
-                    android:id="@+id/news_button_2"
-                    android:layout_width="100dp"
-                    android:layout_height="26dp"
-                    android:padding="3dp"
-                    android:text="Подробно"
-                    android:textColor="#ffffff"
-                    android:textSize="6sp"
-                    android:fontFamily="@font/spartanmb_extrabold"
-                    android:backgroundTint="#221E76"
-                    android:layout_gravity="center"
-                    />
 
 
 
@@ -159,6 +138,7 @@
 
         <!-- Третье изображение в нижнем левом углу -->
         <FrameLayout
+            android:id="@+id/news_button_3"
             android:layout_width="141dp"
             android:layout_height="193dp"
             android:layout_gravity="bottom|start">
@@ -168,7 +148,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/spidey"
+                android:src="@drawable/news2"
                 android:scaleType="centerCrop" />
 
             <!-- Блок с цветом и текстом -->
@@ -203,23 +183,12 @@
                     android:gravity="center"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/spartanmb_extrabold"
-                    android:text="Человек паук терроризирует город"
+                    android:text="Подбор литературы в исследованиях по педогогике"
                     android:textColor="#fff"
                     android:textSize="12sp"
 
                     />
-                <Button
-                    android:id="@+id/news_button_3"
-                    android:layout_width="100dp"
-                    android:layout_height="26dp"
-                    android:padding="3dp"
-                    android:text="Подробно"
-                    android:textColor="#ffffff"
-                    android:textSize="6sp"
-                    android:fontFamily="@font/spartanmb_extrabold"
-                    android:backgroundTint="#221E76"
-                    android:layout_gravity="center"
-                    />
+
 
 
 
@@ -228,6 +197,7 @@
 
         <!-- Четвертое изображение в нижнем правом углу -->
         <FrameLayout
+            android:id="@+id/news_button_4"
             android:layout_width="141dp"
             android:layout_height="193dp"
             android:layout_gravity="bottom|end">
@@ -237,7 +207,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/spidey"
+                android:src="@drawable/news3"
                 android:scaleType="centerCrop" />
 
             <!-- Блок с цветом и текстом -->
@@ -272,22 +242,10 @@
                     android:gravity="center"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/spartanmb_extrabold"
-                    android:text="Человек паук терроризирует город"
+                    android:text="КМУда «Юный программист» аттуу конкурс өтүүдө"
                     android:textColor="#fff"
                     android:textSize="12sp"
 
-                    />
-                <Button
-                    android:id="@+id/news_button_4"
-                    android:layout_width="100dp"
-                    android:layout_height="26dp"
-                    android:padding="3dp"
-                    android:text="Подробно"
-                    android:textColor="#ffffff"
-                    android:textSize="6sp"
-                    android:fontFamily="@font/spartanmb_extrabold"
-                    android:backgroundTint="#221E76"
-                    android:layout_gravity="center"
                     />
 
 
