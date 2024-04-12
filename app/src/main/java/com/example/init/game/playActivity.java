@@ -11,6 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.init.R;
+import com.example.init.game.ResulteActivity;
+
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class playActivity extends AppCompatActivity {
     static String[] question_list = {
@@ -65,7 +69,8 @@ public class playActivity extends AppCompatActivity {
             "try-except" , "if-else" , "switch-case" , "while",
             "Array" , "List" , "Dictionary" , "Tuple"
     };
-    String[] correct_list = { "Google",
+    String[] correct_list = {
+            "Google",
             "Notepad",
             "Youtube",
             "Apple",
@@ -88,19 +93,23 @@ public class playActivity extends AppCompatActivity {
             "append()",
             "Swift",
             "try-except",
-            "Dictionary"};
+            "Dictionary"
+    };
 
-    TextView cpt_question , text_question;
-    Button btn_choose1 , btn_choose2 , btn_choose3 , btn_choose4 , btn_next;
+    TextView cpt_question, text_question;
+    Button btn_choose1, btn_choose2, btn_choose3, btn_choose4, btn_next;
     ProgressBar progressBar;
     TextView progressText;
 
-    int currentQuestion =  0  ;
-    int scorePlayer =  0  ;
+    int currentQuestion = 0;
+    int scorePlayer = 0;
     boolean isclickBtn = false;
     String valueChoose = "";
     Button btn_click;
     CountDownTimer currentTimer;
+
+    int currentSet = 0;
+    ArrayList<Integer> questionIndices = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +124,8 @@ public class playActivity extends AppCompatActivity {
         btn_next = findViewById(R.id.btn_next);
         progressBar = findViewById(R.id.progressBar);
         progressText = findViewById(R.id.progressText);
-
+        generateRandomQuestions();
+        currentQuestion = 0;
         remplirData();
 
         btn_next.setOnClickListener(
@@ -123,7 +133,7 @@ public class playActivity extends AppCompatActivity {
                     if (isclickBtn) {
                         isclickBtn = false;
 
-                        if (!valueChoose.equals(correct_list[currentQuestion])) {
+                        if (!valueChoose.equals(correct_list[questionIndices.get(currentQuestion)])) {
                             Toast.makeText(playActivity.this, "Неправильно", Toast.LENGTH_LONG).show();
                             btn_click.setBackgroundResource(R.drawable.btn_game_pressed);
 
@@ -133,8 +143,8 @@ public class playActivity extends AppCompatActivity {
                             scorePlayer++;
                         }
                         new Handler().postDelayed(() -> {
-                            if (currentQuestion != question_list.length - 1) {
-                                currentQuestion = currentQuestion + 1;
+                            currentQuestion++;
+                            if (currentQuestion < questionIndices.size()) {
                                 remplirData();
                                 valueChoose = "";
                                 btn_choose1.setBackgroundResource(R.drawable.button_style);
@@ -146,11 +156,7 @@ public class playActivity extends AppCompatActivity {
                                 }
                                 startTimer();
                             } else {
-                                Intent intent = new Intent(playActivity.this, ResulteActivity.class);
-                                intent.putExtra("Результат", scorePlayer);
-                                startActivity(intent);
-                                finish();
-                                currentTimer.cancel();
+                                showResult();
                             }
                         }, 2000);
                     } else {
@@ -158,6 +164,9 @@ public class playActivity extends AppCompatActivity {
                     }
                 }
         );
+
+
+
 
         findViewById(R.id.image_back).setOnClickListener(
                 a -> {
@@ -170,6 +179,35 @@ public class playActivity extends AppCompatActivity {
 
         startTimer();
     }
+
+    void generateRandomQuestions() {
+        questionIndices.clear();
+        for (int i = 0; i < question_list.length; i++) {
+            questionIndices.add(i);
+        }
+        Collections.shuffle(questionIndices);
+        questionIndices = new ArrayList<>(questionIndices.subList(0, 10)); // Select only the first 10 indices
+    }
+
+    void showResult() {
+        Intent intent = new Intent(playActivity.this, ResulteActivity.class);
+        intent.putExtra("Результат", scorePlayer);
+        startActivity(intent);
+        finish();
+        currentTimer.cancel();
+    }
+
+    void remplirData() {
+        cpt_question.setText((currentQuestion + 1) + "/" + questionIndices.size());
+
+        int index = questionIndices.get(currentQuestion);
+        text_question.setText(question_list[index]);
+        btn_choose1.setText(choose_list[4 * index]);
+        btn_choose2.setText(choose_list[4 * index + 1]);
+        btn_choose3.setText(choose_list[4 * index + 2]);
+        btn_choose4.setText(choose_list[4 * index + 3]);
+    }
+
 
     void startTimer() {
         long totalTime = 10 * 1000; // 10 секунд
@@ -195,17 +233,8 @@ public class playActivity extends AppCompatActivity {
         currentTimer.start();
     }
 
-    void remplirData(){
-        cpt_question.setText((currentQuestion+1) + "/" + question_list.length);
-        text_question.setText(question_list[currentQuestion]);
-        btn_choose1.setText(choose_list[4 * currentQuestion]);
-        btn_choose2.setText(choose_list[4 * currentQuestion+1]);
-        btn_choose3.setText(choose_list[4 * currentQuestion+2]);
-        btn_choose4.setText(choose_list[4 * currentQuestion+3]);
-    }
-
     public void ClickChoose(View view) {
-        btn_click = (Button)view;
+        btn_click = (Button) view;
         if (isclickBtn) {
             btn_choose1.setBackgroundResource(R.drawable.button_style);
             btn_choose2.setBackgroundResource(R.drawable.button_style);
@@ -215,7 +244,7 @@ public class playActivity extends AppCompatActivity {
         chooseBtn();
     }
 
-    void chooseBtn(){
+    void chooseBtn() {
         btn_click.setBackgroundResource(R.drawable.btn_game_normal);
         isclickBtn = true;
         valueChoose = btn_click.getText().toString();
